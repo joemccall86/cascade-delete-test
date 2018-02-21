@@ -6,6 +6,10 @@ class Organization {
 
     static hasMany = [
             users: Person,
-            channels: Channel
+            teams: Team
     ]
+
+    static mapping = {
+        users cascade: 'all-delete-orphan'
+    }
 }
