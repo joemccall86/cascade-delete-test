@@ -34,7 +34,6 @@ class OrganizationSpec extends Specification {
         }
         userToDelete.delete(flush: true)
 
-
         expect: 'the team has no users'
         Team.first().members.isEmpty()
 

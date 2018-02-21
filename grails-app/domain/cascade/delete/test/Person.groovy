@@ -13,7 +13,7 @@ class Person {
 
     def beforeDelete() {
 
-        Team.withSession {
+        Team.withNewSession {
             removeFromAllTeams()
         }
 
